@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="IglesiaApp.HojaDominicalPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFFFFF"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" Margin="0">
+            <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#A30C94" Margin="10,10,10,10" CornerRadius="10">
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="0" Margin="0">
+                    <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40" />
+                            <RowDefinition Height="40" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.30*" />
+                            <ColumnDefinition Width="0.60*" />
+                            <ColumnDefinition Width="0.30*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="F.Inicio:" FontSize="15" Grid.Row="0" Grid.Column="0" VerticalOptions="CenterAndExpand"/>
+                        <DatePicker x:Name="DpInicio" FontSize="15" Grid.Row="0" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="F.Fin:" FontSize="15" Grid.Row="1" Grid.Column="0" VerticalOptions="CenterAndExpand"/>
+                        <DatePicker x:Name="DpFin" FontSize="15" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                        <ImageButton x:Name="BtnBuscar" Source="icono_search.png" BackgroundColor="Transparent" BorderColor="#A30C94" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFit" CornerRadius="8" Margin="2" Clicked="BtnBuscar_Clicked" Grid.Row="0" Grid.Column="2" Grid.RowSpan="2"></ImageButton>
+                    </Grid>
+                    <ListView x:Name="ListHojaDominical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasUnevenRows="True" SeparatorVisibility="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="40" />
+                                                <RowDefinition Height="200" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="0.50*" />
+                                                <ColumnDefinition Width="0.50*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Label Text="{Binding Fecha}" FontSize="20" VerticalOptions="CenterAndExpand" FontAttributes="Bold" Margin="0,2,0,0" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0"/>
+                                            <Frame CornerRadius="8" OutlineColor="#F809FB" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0,0,0,5">
+                                                <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*" />
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="0.50*" />
+                                                        <ColumnDefinition Width="0.50*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Image Source="{Binding Url1}" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill" Grid.Row="0" Grid.Column="0"></Image>
+                                                    <Image Source="{Binding Url2}" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill" Grid.Row="0" Grid.Column="1"></Image>
+                                                </Grid>
+                                            </Frame>
+                                        </Grid>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>                
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

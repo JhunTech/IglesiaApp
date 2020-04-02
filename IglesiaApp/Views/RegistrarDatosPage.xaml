@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:sr="clr-namespace:IglesiaApp"
+             x:Class="IglesiaApp.RegistrarDatosPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFFFFF" Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#A30C94" Margin="10,10,10,10" CornerRadius="10">
+                <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.05*" />
+                        <ColumnDefinition Width="0.90*" />
+                        <ColumnDefinition Width="0.05*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Ingreso/Modificación de Datos" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Grid.Row="0" Grid.Column="1" FontSize="23" TextColor="#A30C94" FontAttributes="Bold"></Label>
+                    <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#A30C94" Margin="0,5,0,5" Padding="0" CornerRadius="25" Grid.Row="1" Grid.Column="1">
+                        <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.35*" />
+                                <ColumnDefinition Width="0.65*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Email:" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="0" FontSize="13" TextColor="#A30C94" FontAttributes="Bold" Margin="7,0,0,0"/>
+                            <sr:CustomEntry x:Name="txtEmail" BackgroundColor="Transparent" MaxLength="250"  Placeholder="Email del usuario" FontSize="13" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></sr:CustomEntry>
+                        </Grid>
+                    </Frame>
+                    <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#A30C94" Margin="0,5,0,5" Padding="0" CornerRadius="25" Grid.Row="2" Grid.Column="1">
+                        <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.35*" />
+                                <ColumnDefinition Width="0.65*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Nombre:" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="0" FontSize="13" TextColor="#A30C94" FontAttributes="Bold" Margin="7,0,0,0"/>
+                            <sr:CustomEntry x:Name="txtNombre" BackgroundColor="Transparent" MaxLength="150" Placeholder="Nombre de Usuario" FontSize="13" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></sr:CustomEntry>
+                        </Grid>
+                    </Frame>
+                    <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#A30C94" Margin="0,5,0,5" Padding="0" CornerRadius="25" Grid.Row="3" Grid.Column="1">
+                        <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.35*" />
+                                <ColumnDefinition Width="0.65*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Password:" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="0" FontSize="13" TextColor="#A30C94" FontAttributes="Bold" Margin="7,0,0,0"/>
+                            <sr:CustomEntry x:Name="txtPassword1" BackgroundColor="Transparent" MaxLength="16" IsPassword="True" Placeholder="Password de Usuario" FontSize="13" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></sr:CustomEntry>
+                        </Grid>
+                    </Frame>
+                    <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#A30C94" Margin="0,5,0,5" Padding="0" CornerRadius="25" Grid.Row="4" Grid.Column="1">
+                        <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.35*" />
+                                <ColumnDefinition Width="0.65*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Re-Password:" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="0" FontSize="13" TextColor="#A30C94" FontAttributes="Bold" Margin="7,0,0,0"/>
+                            <sr:CustomEntry x:Name="txtPassword2" MaxLength="16" BackgroundColor="Transparent" IsPassword="True" Placeholder="Repetir Password" FontSize="13" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></sr:CustomEntry>
+                        </Grid>
+                    </Frame>
+                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal" Grid.Row="5" Grid.Column="1">
+                        <Button x:Name="BtnCancelar" Text="Cancelar" BackgroundColor="LightGray"  TextColor="White" CornerRadius="15" Margin="0,5,5,5" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" WidthRequest="100" HeightRequest="50" Clicked="BtnCancelar_Clicked"></Button>
+                        <Button x:Name="BtnGuardar" Text="Guardar" BackgroundColor="#A30C94" TextColor="White" CornerRadius="15" Margin="5,5,0,5" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="100" HeightRequest="50" Clicked="BtnGuardar_Clicked"></Button>
+                    </StackLayout>                    
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

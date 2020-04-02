@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:carousel="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             x:Class="IglesiaApp.IglesiaPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFFFFF" Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#A30C94" Margin="10" CornerRadius="10">
+                <ScrollView Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="200" />
+                            <RowDefinition Height="80" />
+                            <RowDefinition Height="80" />
+                            <RowDefinition Height="80" />
+                            <RowDefinition Height="80" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Inicio" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Grid.Row="0" Grid.Column="0" FontSize="23" TextColor="#A30C94" FontAttributes="Bold"></Label>
+                        <carousel:CarouselViewControl x:Name="carouselIglesia"
+                                                      ShowArrows="True"
+                                                      ShowIndicators="True"
+                                                      Orientation="Horizontal" 
+                                                      HorizontalOptions="FillAndExpand"
+                                                      VerticalOptions="FillAndExpand" 
+                                                      Grid.Row="1" Grid.Column="0"
+                                                      Margin="0,0,0,10"
+                                                      ItemsSource="{Binding ListaCarousel}">
+                            <carousel:CarouselViewControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding Url}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill" Margin="0,0,0,20"></Image>
+                                </DataTemplate>
+                            </carousel:CarouselViewControl.ItemTemplate>
+                        </carousel:CarouselViewControl>
+                        <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#E0E0E0" BackgroundColor="#FFFFFF" Margin="0,3,0,3" Padding="0" CornerRadius="10" Grid.Row="2" Grid.Column="0">
+                            <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0" Padding="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.30*" />
+                                    <ColumnDefinition Width="0.80*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="icono_iglesia.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill" Margin="5" Grid.Row="0" Grid.Column="0"></Image>
+                                <Label Text="Iglesia" VerticalOptions="CenterAndExpand" FontSize="20" TextColor="#8F8D8D" FontAttributes="Bold" Margin="15,0,0,0" Grid.Row="0" Grid.Column="1"></Label>
+                            </Grid>
+                        </Frame>
+                        <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#E0E0E0" BackgroundColor="#FFFFFF" Margin="0,3,0,3" Padding="0" CornerRadius="10" Grid.Row="3" Grid.Column="0">
+                            <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0" Padding="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.30*" />
+                                    <ColumnDefinition Width="0.80*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="icono_eucaristia.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill" Margin="5" Grid.Row="0" Grid.Column="0"></Image>
+                                <Label Text="Eucaristía" VerticalOptions="CenterAndExpand" FontSize="20" TextColor="#8F8D8D" FontAttributes="Bold" Margin="15,0,0,0" Grid.Row="0" Grid.Column="1"></Label>
+                            </Grid>
+                        </Frame>
+                        <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#E0E0E0" BackgroundColor="#FFFFFF" Margin="0,3,0,3" Padding="0" CornerRadius="10" Grid.Row="4" Grid.Column="0">
+                            <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0" Padding="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.30*" />
+                                    <ColumnDefinition Width="0.80*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="icono_cursos.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill" Margin="5" Grid.Row="0" Grid.Column="0"></Image>
+                                <Label Text="Cursos" VerticalOptions="CenterAndExpand" FontSize="20" TextColor="#8F8D8D" FontAttributes="Bold" Margin="15,0,0,0" Grid.Row="0" Grid.Column="1"></Label>
+                            </Grid>
+                        </Frame>
+                        <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#E0E0E0" BackgroundColor="#FFFFFF" Margin="0,3,0,3" Padding="0" CornerRadius="10" Grid.Row="5" Grid.Column="0">
+                            <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0" Padding="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.30*" />
+                                    <ColumnDefinition Width="0.80*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="icono_noticias.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill" Margin="5" Grid.Row="0" Grid.Column="0"></Image>
+                                <Label Text="Noticias" VerticalOptions="CenterAndExpand" FontSize="20" TextColor="#8F8D8D" FontAttributes="Bold" Margin="15,0,0,0" Grid.Row="0" Grid.Column="1"></Label>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </ScrollView>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

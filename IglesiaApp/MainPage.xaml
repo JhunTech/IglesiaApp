@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="IglesiaApp.MainPage">
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" BackgroundColor="#FFFFFF">
+        <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#A30C94" Margin="30,50,30,50" CornerRadius="10">
+            <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.15*" />
+                    <RowDefinition Height="0.60*" />
+                    <RowDefinition Height="0.25*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Iglesia Santa Rita de Casia" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Grid.Row="0" Grid.Column="0" FontSize="23" TextColor="#A30C94" FontAttributes="Bold"></Label>
+                <Image Source="IconoSantaRita.png" HorizontalOptions="Center" VerticalOptions="FillAndExpand" Aspect="AspectFit"  Grid.Row="1" Grid.Column="0"></Image>
+                <Button x:Name="BtnIniciar" Text="Iniciar" BackgroundColor="#A30C94" TextColor="White" CornerRadius="15" VerticalOptions="StartAndExpand" HorizontalOptions="Center" WidthRequest="150" HeightRequest="50" Grid.Row="2" Grid.Column="0" Clicked="BtnIniciar_Clicked"></Button>
+            </Grid>
+        </Frame>        
+    </StackLayout>
+
+</ContentPage>

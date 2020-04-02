@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:sr="clr-namespace:IglesiaApp"
+             x:Class="IglesiaApp.LoginPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFFFFF" Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#A30C94" Margin="10,10,10,10" CornerRadius="10">
+                <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.05*" />
+                        <ColumnDefinition Width="0.90*" />
+                        <ColumnDefinition Width="0.05*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Login" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Grid.Row="0" Grid.Column="1" FontSize="23" TextColor="#A30C94" FontAttributes="Bold"></Label>
+                    <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#A30C94" Margin="0,5,0,5" Padding="0" CornerRadius="25" Grid.Row="1" Grid.Column="1">
+                        <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.30*" />
+                                <ColumnDefinition Width="0.70*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Email:" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" FontSize="15" TextColor="#A30C94" FontAttributes="Bold" Margin="7,0,0,0"/>
+                            <sr:CustomEntry x:Name="txtUsuario" Placeholder="Nombre de Usuario" FontSize="15" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></sr:CustomEntry>
+                        </Grid>
+                    </Frame>
+                    <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#A30C94" Margin="0,5,0,5" Padding="0" CornerRadius="25" Grid.Row="2" Grid.Column="1">
+                        <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.30*" />
+                                <ColumnDefinition Width="0.70*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Password:" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" FontSize="15" TextColor="#A30C94" FontAttributes="Bold" Margin="7,0,0,0"/>
+                            <sr:CustomEntry x:Name="txtPassword" MaxLength="16" BackgroundColor="Transparent" IsPassword="True" Placeholder="Password de Usuario" FontSize="15" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></sr:CustomEntry>
+                        </Grid>
+                    </Frame>
+                    <Button x:Name="BtnLogin" Text="Iniciar Sesión" BackgroundColor="#A30C94" TextColor="White" CornerRadius="15" Margin="0,5,0,5" VerticalOptions="StartAndExpand" HorizontalOptions="Center" WidthRequest="150" HeightRequest="50" Grid.Row="3" Grid.Column="1" Clicked="BtnLogin_Clicked"></Button>
+                    <Label Text="Registrarse" HorizontalTextAlignment="Center"  HorizontalOptions="Center" VerticalOptions="EndAndExpand" Grid.Row="4" Grid.Column="1" FontSize="15" TextColor="#A30C94" FontAttributes="Bold" TextDecorations="Underline">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding Registrarse}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </Frame>           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
