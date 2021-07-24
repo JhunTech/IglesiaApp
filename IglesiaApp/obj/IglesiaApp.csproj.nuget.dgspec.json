@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Proyectos\\IglesiaApp\\IglesiaApp\\IglesiaApp.csproj": {}
+    "D:\\@GIT\\IglesiaApp\\IglesiaApp\\IglesiaApp.csproj": {}
   },
   "projects": {
-    "D:\\Proyectos\\IglesiaApp\\IglesiaApp\\IglesiaApp.csproj": {
+    "D:\\@GIT\\IglesiaApp\\IglesiaApp\\IglesiaApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Proyectos\\IglesiaApp\\IglesiaApp\\IglesiaApp.csproj",
+        "projectUniqueName": "D:\\@GIT\\IglesiaApp\\IglesiaApp\\IglesiaApp.csproj",
         "projectName": "IglesiaApp",
-        "projectPath": "D:\\Proyectos\\IglesiaApp\\IglesiaApp\\IglesiaApp.csproj",
+        "projectPath": "D:\\@GIT\\IglesiaApp\\IglesiaApp\\IglesiaApp.csproj",
         "packagesPath": "C:\\Users\\julio\\.nuget\\packages\\",
-        "outputPath": "D:\\Proyectos\\IglesiaApp\\IglesiaApp\\obj\\",
+        "outputPath": "D:\\@GIT\\IglesiaApp\\IglesiaApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
@@ -32,6 +32,7 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -43,14 +44,15 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "Acr.UserDialogs": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[7.1.0.514, )"
             },
             "CarouselView.FormsPlugin": {
               "target": "Package",
-              "version": "[5.2.0, )"
+              "version": "[6.0.0, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -60,23 +62,27 @@
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[12.0.2, )"
+              "version": "[13.0.1, )"
             },
             "RestSharp": {
               "target": "Package",
-              "version": "[106.6.10, )"
+              "version": "[106.12.0, )"
             },
-            "Xamarin.Essentials": {
+            "Xamarin.CommunityToolkit": {
               "target": "Package",
               "version": "[1.2.0, )"
             },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.1.0.555618, )"
+              "version": "[5.0.0.2083, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
-              "version": "[1.5.231, )"
+              "version": "[1.7.335, )"
             }
           },
           "imports": [
@@ -89,7 +95,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

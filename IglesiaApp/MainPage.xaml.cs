@@ -1,5 +1,6 @@
-﻿using System;
+﻿using IglesiaApp.Resources.Constants;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -13,22 +14,25 @@ namespace IglesiaApp
         public MainPage()
         {
             NavigationPage.SetHasNavigationBar(this, false);
-            InitializeComponent();            
+            InitializeComponent();
+            CargarData();
         }
 
-        private async void BtnIniciar_Clicked(object sender, EventArgs e)
+        private async void CargarData()
         {
             var current = Connectivity.NetworkAccess;
+            lblTitulo.Text = ConstantsFrontApp.IntroTitulo;
+            lblUbicacion.Text = ConstantsFrontApp.IntroUbicacion;
 
             if (current == NetworkAccess.Internet)
             {
+                await Task.Delay(3000);
                 await Navigation.PushAsync(new LoginPage());
             }
             else
             {
                 await DisplayAlert("Atención", "No tienes ninguna conexión a internet activa.", "Aceptar");
             }
-            
         }
     }
 }

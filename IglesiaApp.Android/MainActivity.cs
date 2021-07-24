@@ -3,7 +3,7 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using Acr.UserDialogs;
-using CarouselView.FormsPlugin.Android;
+using CarouselView.FormsPlugin.Droid;
 
 namespace IglesiaApp.Droid
 {

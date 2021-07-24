@@ -3,9 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:DiccionarioColor="clr-namespace:IglesiaApp.Resources.Dictionary"
              mc:Ignorable="d"
              x:Class="IglesiaApp.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <DiccionarioColor:Colores/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        <!--Labels-->
+        <Style x:Key="lblTituloPrimario" TargetType="Label">
+            <Setter Property="FontFamily" Value="FontMedium"/>
+            <Setter Property="FontSize" Value="40"/>
+        </Style>
+        <Style x:Key="lblTituloSecundario" TargetType="Label">
+            <Setter Property="FontFamily" Value="FontMedium"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
     </Application.Resources>
 </Application>

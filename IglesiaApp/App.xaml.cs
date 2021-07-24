@@ -1,6 +1,11 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+[assembly: ExportFont("NeueHaasDisplayBlack.ttf", Alias = "FontBlack")]
+[assembly: ExportFont("NeueHaasDisplayBold.ttf", Alias = "FontBold")]
+[assembly: ExportFont("NeueHaasDisplayLight.ttf", Alias = "FontLight")]
+[assembly: ExportFont("NeueHaasDisplayMedium.ttf", Alias = "FontMedium")]
+[assembly: ExportFont("NeueHaasDisplayRoman.ttf", Alias = "FontRoman")]
 
 namespace IglesiaApp
 {

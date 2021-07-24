@@ -5,22 +5,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="IglesiaApp.MainPage">
-    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" BackgroundColor="#FFFFFF">
-        <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" OutlineColor="#A30C94" Margin="30,50,30,50" CornerRadius="10">
-            <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.15*" />
-                    <RowDefinition Height="0.60*" />
-                    <RowDefinition Height="0.25*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Label Text="Iglesia Santa Rita de Casia" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Grid.Row="0" Grid.Column="0" FontSize="23" TextColor="#A30C94" FontAttributes="Bold"></Label>
-                <Image Source="IconoSantaRita.png" HorizontalOptions="Center" VerticalOptions="FillAndExpand" Aspect="AspectFit"  Grid.Row="1" Grid.Column="0"></Image>
-                <Button x:Name="BtnIniciar" Text="Iniciar" BackgroundColor="#A30C94" TextColor="White" CornerRadius="15" VerticalOptions="StartAndExpand" HorizontalOptions="Center" WidthRequest="150" HeightRequest="50" Grid.Row="2" Grid.Column="0" Clicked="BtnIniciar_Clicked"></Button>
-            </Grid>
-        </Frame>        
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" BackgroundColor="#FFFFFF">        
+        <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.15*" />
+                <RowDefinition Height="0.35*" />
+                <RowDefinition Height="0.50*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="Intro_SR.png" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"></Image>
+            <Image Source="cruz_blanca.png" HorizontalOptions="Center" VerticalOptions="FillAndExpand" Aspect="AspectFit"  Grid.Row="1" Grid.Column="0"/>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0" Grid.Row="2" Grid.Column="0" Margin="16,0,16,0">
+                <Label x:Name="lblTitulo" Style="{StaticResource lblTituloPrimario}" TextColor="{StaticResource ColorBlanco}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="0,0,0,16"></Label>
+                <Label x:Name="lblUbicacion" Style="{StaticResource lblTituloSecundario}" TextColor="{StaticResource ColorBlanco}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="Start"></Label>
+            </StackLayout>            
+        </Grid>
     </StackLayout>
-
 </ContentPage>
